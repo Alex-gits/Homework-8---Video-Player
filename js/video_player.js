@@ -128,9 +128,8 @@ const VideoPlayer = (function () {
     // 4. Функция для перемотки вперед/назад по дабл клику по правой/левой стороне плеера
 
     function doubleClickRewind(event) {
-        const videoWidth = video.offsetWidth;
 
-        if (event.offsetX > videoWidth / 2) {
+        if (event.offsetX > video.videoWidth / 2) {
             video.currentTime += 1;
         } else {
             video.currentTime -= 1.3; // Сделал 1.3, ибо при дабл клике по ощущениям как-то медленее перемотка назад срабатывает при включенном видео. Возможно, из-за таймаута, не знаю
@@ -150,7 +149,7 @@ const VideoPlayer = (function () {
                     doubleClickRewind(event);
                 }
                 clicks = 0;
-            }, 300);
+            }, 350);
         }
     }
 
