@@ -163,7 +163,7 @@ const VideoPlayer = (function () {
 
         // 5. Ивенты для перемотки с зажатой кнопкой мыши:
 
-        progressWrapper.addEventListener('mousemove', (e) => mouseStatus && _scrub(e))
+        progressWrapper.addEventListener('mousemove', (e) => mouseStatus && _scrub(e));
         progressWrapper.addEventListener('mousedown', () => mouseStatus = true);
         progressWrapper.addEventListener('mouseup', () => mouseStatus = false);
     }
@@ -173,7 +173,7 @@ const VideoPlayer = (function () {
     }
 }());
 
-const video = document.querySelector('.player__video')
+const video = document.querySelector('.player__video');
 const player1 = VideoPlayer.init(video);
 
 // Перемотка мышкой зажатой. mousemove
