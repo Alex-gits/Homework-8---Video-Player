@@ -21,7 +21,7 @@ const VideoPlayer = (function () {
     let allInputs = null;
 
     let clicks = 0;
-    let mouseStatus = false
+    let mouseStatus = false;
 
     /**
      * @desc Function init
@@ -175,5 +175,3 @@ const VideoPlayer = (function () {
 
 const video = document.querySelector('.player__video');
 const player1 = VideoPlayer.init(video);
-
-// Перемотка мышкой зажатой. mousemove
