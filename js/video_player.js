@@ -129,10 +129,10 @@ const VideoPlayer = (function () {
 
     function doubleClickRewind(event) {
 
-        if (event.offsetX > video.videoWidth / 2) {
+        if (event.offsetX > video.offsetWidth / 2) {
             video.currentTime += 1;
         } else {
-            video.currentTime -= 1.3; // Сделал 1.3, ибо при дабл клике по ощущениям как-то медленее перемотка назад срабатывает при включенном видео. Возможно, из-за таймаута, не знаю
+            video.currentTime -= 1.3;
         }
     }
 
